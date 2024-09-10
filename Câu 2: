@@ -1,0 +1,72 @@
+
+public class DiscreteSignal {
+    private int[] signal;
+
+    public DiscreteSignal(int size) {
+        signal = new int[size];
+    }
+
+    public void setValue(int index, int value) {
+        if (index >= 0 && index < signal.length) {
+            signal[index] = value;
+        } else {
+            throw new IndexOutOfBoundsException("Index out of bounds.");
+        }
+    }
+
+    public int getValue(int index) {
+        if (index >= 0 && index < signal.length) {
+            return signal[index];
+        } else {
+            throw new IndexOutOfBoundsException("Index out of bounds.");
+        }
+    }
+
+    public int computeSignal(int n) {
+        if (n >= 0 && n < signal.length) {
+            return signal[n];
+        } else {
+            return 0;
+        }
+    }
+
+    public void printSignal() {
+        for (int i = 0; i < signal.length; i++) {
+            System.out.println("x(" + i + ") = " + signal[i]);
+        }
+    }
+}
+
+public class Radar {
+    private DiscreteSignal signal;
+
+    public Radar(int size) {
+        signal = new DiscreteSignal(size);
+        initializeSignal();
+    }
+
+    private void initializeSignal() {
+        for (int n = 0; n < signal.signal.length; n++) {
+            if (n >= 0 && n <= 15) {
+                signal.setValue(n, 1 - n / 15);
+            } else {
+                signal.setValue(n, 0);
+            }
+        }
+    }
+
+    public void analyzeSignal(int n) {
+        if (n >= 0 && n < signal.signal.length) {
+            int result = signal.computeSignal(n);
+            System.out.println("X(" + n + ") = " + result);
+        } else {
+            System.out.println("Invalid index.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Radar radar = new Radar(16); 
+        radar.analyzeSignal(4); 
+        radar.signal.printSignal();
+    }
+}
