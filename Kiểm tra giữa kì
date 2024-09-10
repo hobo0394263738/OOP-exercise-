@@ -1,0 +1,130 @@
+// Giao diện tín hiệu
+interface Signal {
+    void displayInfo();
+}
+
+// Lớp xác định xung đơn vị
+class UnitImpulse {
+    public static int unitImpulse(int n) {
+        return (n == 0) ? 1 : 0;
+    }
+}
+
+// Lớp tín hiệu rời rạc
+class DiscreteSignal implements Signal {
+    private final double amplitude;
+    private final double frequency;
+    private final double period;
+    private final double wavelength;
+    private final int[] samples;
+
+    public DiscreteSignal(double amplitude, double frequency, double period, double wavelength, int[] samples) {
+        this.amplitude = amplitude;
+        this.frequency = frequency;
+        this.period = period;
+        this.wavelength = wavelength;
+        this.samples = samples;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Discrete Signal:");
+        System.out.println("  Amplitude: " + amplitude);
+        System.out.println("  Frequency: " + frequency);
+        System.out.println("  Period: " + period);
+        System.out.println("  Wavelength: " + wavelength);
+        System.out.print("  Samples: ");
+        for (int sample : samples) {
+            System.out.print(sample + " ");
+        }
+        System.out.println();
+    }
+
+    public int[] computeDiscreteSignal() {
+        int length = samples.length;
+        int[] result = new int[length];
+        for (int n = 0; n < length; n++) {
+            int sum = 0;
+            for (int k = 0; k < length; k++) {
+                sum += samples[k] * UnitImpulse.unitImpulse(n - k);
+            }
+            result[n] = sum;
+        }
+        return result;
+    }
+
+    public void displayComputedSignal() {
+        int[] computedSignal = computeDiscreteSignal();
+        System.out.print("Computed Discrete Signal: ");
+        for (int value : computedSignal) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+}
+
+// Lớp tín hiệu liên tục
+class ContinuousSignal implements Signal {
+    private final double amplitude;
+    private final double frequency;
+    private final double period;
+    private final double wavelength;
+    private final String function;
+
+    public ContinuousSignal(double amplitude, double frequency, double period, double wavelength, String function) {
+        this.amplitude = amplitude;
+        this.frequency = frequency;
+        this.period = period;
+        this.wavelength = wavelength;
+        this.function = function;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Continuous Signal:");
+        System.out.println("  Amplitude: " + amplitude);
+        System.out.println("  Frequency: " + frequency);
+        System.out.println("  Period: " + period);
+        System.out.println("  Wavelength: " + wavelength);
+        System.out.println("  Function: " + function);
+    }
+}
+
+// Lớp Radar để phân tích tín hiệu
+class Radar {
+    private static final int MAX_N = 15;
+
+    // Tính giá trị tín hiệu theo công thức
+    public static double computeSignalValue(int n) {
+        if (n >= 0 && n <= MAX_N) {
+            return 1 - (n / (double) MAX_N); // Đảm bảo phép chia là số thực
+        } else {
+            return 0;
+        }
+    }
+
+    // Hiển thị giá trị tín hiệu cho một giá trị n
+    public static void displaySignalValue(int n) {
+        double value = computeSignalValue(n);
+        System.out.println("X(" + n + ") = " + value);
+    }
+}
+
+// Lớp chính để chạy ví dụ
+public class Main {
+    public static void main(String[] args) {
+        // Tín hiệu rời rạc
+        int[] samples = {1, 0, 1, 0, 1};
+        DiscreteSignal discreteSignal = new DiscreteSignal(1.0, 50, 0.02, 0.1, samples);
+        discreteSignal.displayInfo();
+        discreteSignal.displayComputedSignal();
+
+        // Tín hiệu liên tục
+        ContinuousSignal continuousSignal = new ContinuousSignal(1.0, 50, 0.02, 0.1, "sin(t)");
+        continuousSignal.displayInfo();
+
+        // Phân tích tín hiệu với lớp Radar
+        System.out.println("Radar Analysis:");
+        Radar.displaySignalValue(4); // Tính và hiển thị giá trị tín hiệu tại n = 4
+    }
+}
