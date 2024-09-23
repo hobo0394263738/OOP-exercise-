@@ -1,0 +1,21 @@
+class Customer:
+    def __init__(self, name, id_user, date_of_birth, email, card_id, password):
+        self.name = name
+        self.id_user = id_user
+        self.date_of_birth = date_of_birth
+        self.email = email
+        self.card_id = card_id
+        self.password = password
+
+    def update_email(self, new_email):
+        self.email = new_email
+    
+    def update_password(self, new_password):
+        self.password = new_password
+    
+    def display_info(self):
+        return f"Customer: {self.name}, ID: {self.id_user}, Email: {self.email}"
+
+# Ví dụ tạo đối tượng Customer
+customer1 = Customer("Nguyen Van A", 101, "01-01-1980", "nguyenva@example.com", "CARD123", "password123")
+print(customer1.display_info())
