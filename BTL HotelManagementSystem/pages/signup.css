@@ -1,0 +1,134 @@
+/* Các quy tắc CSS đã có của bạn */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+}
+
+.content-banner {
+    color: #FFF;
+    font-size: 3em;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #233871; /* Màu nền cho thanh trên cùng */
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-height: 100px; 
+    width: 120%; 
+}
+
+h2 {
+    text-align: center; /* Căn giữa chữ */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.auth-buttons .button {
+    background-color: #fff; /* Nền nút */
+    color: #233871; /* Màu chữ */
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.navigation {
+    background-color: #e79314; /* Màu nền cho menu */
+}
+
+.navigation ul {
+    display: flex; /* Hiển thị menu theo hàng ngang */
+    justify-content: center; /* Căn giữa các nút */
+    list-style: none; /* Bỏ dấu đầu dòng */
+    padding: 10px 0; /* Khoảng cách trên và dưới cho menu */
+}
+
+.navigation li {
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+}
+
+.navigation a {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 10px 15px; /* Khoảng cách trong từng nút */
+    border-radius: 4px; /* Bo tròn góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền khi hover */
+}
+
+.navigation a:hover {
+    background-color: #030f2b; /* Màu nền khi hover */
+}
+
+.navigation .button {
+    background-color: #a1571a; /* Nền nút */
+    color: #fff; /* Màu chữ */
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.submit-button .button{
+    background-color: #233871; /* Nền nút */
+    color: #fff; /* Màu chữ */
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    text-decoration: none; /* Bỏ gạch chân */
+}
+.main {
+    padding: 20px; /* Khoảng cách xung quanh nội dung chính */
+}
+
+.registration-form {
+    max-width: 500px; /* Độ rộng tối đa của form */
+    margin: 0 auto; /* Căn giữa form */
+    padding: 20px; /* Khoảng cách xung quanh form */
+    background-color: #f9f9f9; /* Màu nền cho form */
+    border-radius: 5px; /* Bo tròn góc cho form */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Khoảng cách giữa các trường nhập liệu */
+}
+
+.form-group label {
+    display: block; /* Hiển thị nhãn trên một dòng mới */
+    margin-bottom: 5px; /* Khoảng cách giữa nhãn và trường nhập liệu */
+}
+
+.form-group input {
+    width: 100%; /* Độ rộng của trường nhập liệu chiếm toàn bộ chiều rộng */
+    padding: 10px; /* Khoảng cách bên trong trường nhập liệu */
+    border: 1px solid #ccc; /* Đường viền cho trường nhập liệu */
+    border-radius: 4px; /* Bo tròn góc cho trường nhập liệu */
+}
+
+.footer {
+    text-align: center; /* Căn giữa chữ */
+    padding: 20px;
+    background-color: #233871; /* Màu nền cho footer */
+    color: white; /* Màu chữ cho footer */
+}

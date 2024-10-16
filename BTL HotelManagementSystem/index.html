@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hotel Management - Phenikaa</title>
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="image/logophenikaa.png" alt="Logo" width="120">
+            </div>
+            <div class="content-banner"> 
+                <strong>Hotel Management - Phenikaa</strong>
+            </div>
+            <div class="auth-buttons">
+                <a href="pages/signup.html" class="button">Đăng Ký</a>
+                <a href="login.html" class="button">Đăng Nhập</a>
+            </div>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" class="button">Trang Chủ</a></li>
+                <li><a href="services.html" class="button">Dịch Vụ</a></li>
+                <li><a href="contact.html" class="button">Liên Hệ</a></li>
+                <li><a href="room-management.html" class="button">Quản Lý Phòng</a></li>
+                <li class="form-container">
+                    <label for="destination">Bạn muốn đến đâu?</label>
+                    <input type="text" id="destination" placeholder="Nhập địa điểm...">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="image/banner.png" alt="Banner" class="banner-image">
+    </div>
+
+    <main class="main">
+        <section class="featured-hotels">
+            <h2>Khách sạn nổi bật</h2>
+            <div class="hotel-cards">
+                <div class="hotel-card">
+                    <img src="image/hotel1.jpg" alt="Hotel 1">
+                    <h3>Khách sạn A</h3>
+                    <p>Địa chỉ: Đường A, Thành phố B</p>
+                    <a href="hotel-details.html" class="button">Xem Chi Tiết</a>
+                </div>
+                <div class="hotel-card">
+                    <img src="image/hotel2.jpg" alt="Hotel 2">
+                    <h3>Khách sạn B</h3>
+                    <p>Địa chỉ: Đường B, Thành phố C</p>
+                    <a href="hotel-details.html" class="button">Xem Chi Tiết</a>
+                </div>
+                <div class="hotel-card">
+                    <img src="image/hotel3.jpg" alt="Hotel 3">
+                    <h3>Khách sạn C</h3>
+                    <p>Địa chỉ: Đường C, Thành phố D</p>
+                    <a href="hotel-details.html" class="button">Xem Chi Tiết</a>
+                </div>
+                <div class="hotel-card">
+                    <div class="card-content">
+                        <h3>Xem thêm</h3>
+                        <p>Khám phá thêm nhiều khách sạn khác!</p>
+                        <a href="all-hotels.html" class="button">Xem Tất Cả</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Hotel Management of Phenikaa</p>
+    </footer>
+</body>
+</html>
