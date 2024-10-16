@@ -8,13 +8,11 @@ GROUP_10-OOP-N03
 - **Nguyễn Tùng Dương 23010050**: Phát triển phần mềm toàn diện.
 
 ## Chức Năng Chính
-- Thêm, sửa, xoá thông tin khách hàng
-- Thêm, sửa, xoá phòng
-- Thêm, sửa, xóa booking
-- Lấy thông tin khách hàng
-- Lấy thông tin phòng
-
-
+- Đăng ký, đăng nhập tài khoản người dùng
+- Đặt phòng
+- Liệt kê các phòng, đề xuất tìm kiếm
+- Thêm, sửa, xóa thông tin phòng 
+- Thêm, sửa, xóa thông tin khách hàng
 ## UML Dự Án
 
 ## 1.1 Entity-Relationship Diagram (ERD)
