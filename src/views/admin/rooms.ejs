@@ -1,0 +1,43 @@
+<div class="room-management-page">
+    <h1>Quản lý Phòng</h1>
+
+    <div class="actions">
+        <a href="/admin/room/add" class="add-room-btn">Thêm Phòng</a>
+    </div>
+
+    <table class="room-table">
+        <thead>
+            <tr>
+                <th>Số Phòng</th>
+                <th>Loại Phòng</th>
+                <th>Trạng Thái</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (rooms && rooms.length> 0) { %>
+                <% rooms.forEach(room=> { %>
+                    <tr>
+                        <td>
+                            <%= room.room_number %>
+                        </td>
+                        <td>
+                            <%= room.RoomType ? room.RoomType.name : 'Không xác định' %>
+                        </td> <!-- Check if RoomType exists -->
+                        <td>
+                            <%= room.status %>
+                        </td>
+                        <td>
+                            <a href="/admin/room/edit/<%= room.id %>" class="edit-btn">Sửa</a>
+                            <!-- <button class="delete-btn">Xóa</button> -->
+                        </td>
+                    </tr>
+                    <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="4">Chưa có phòng nào</td>
+                            </tr>
+                            <% } %>
+        </tbody>
+    </table>
+</div>

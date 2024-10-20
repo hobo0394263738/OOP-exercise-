@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/home-public.css">
+    <link rel="stylesheet" href="/css/room-detail-public.css">
+    <link rel="stylesheet" href="/css/my-bookings.css">
+</head>
+
+<body>
+
+    <!-- Gọi header và truyền thông tin user đã nhận từ route -->
+    <%- include('../partials/header', { user: user }) %>
+
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                <%- include(body) %> <!-- Include file EJS được truyền từ route -->
+            </div>
+        </main>
+
+        <!-- Gọi footer -->
+        <%- include('../partials/footer') %>
+
+</body>
+
+</html>

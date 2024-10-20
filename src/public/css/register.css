@@ -1,0 +1,84 @@
+/* Đặt phạm vi chỉ ảnh hưởng đến trang đăng ký */
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 225px);
+}
+
+.register-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+}
+
+.register-box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #223871;
+}
+
+/* Thông báo lỗi */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.register-box .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.register-box .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.register-box .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.register-box .input-group input:focus {
+    outline: none;
+    border-color: #223871;
+}
+
+.register-box .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #223871;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-box .register-btn:hover {
+    background-color: #1b2b5b;
+}
+
+.register-box a {
+    display: block;
+    margin-top: 10px;
+    color: #223871;
+    text-decoration: none;
+}
+
+.register-box a:hover {
+    text-decoration: underline;
+}

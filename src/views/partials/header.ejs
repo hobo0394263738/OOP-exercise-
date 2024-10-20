@@ -1,0 +1,30 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.jpg" alt="Logo Khách sạn">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Trang Chủ</a></li>
+                <li><a href="/about">Giới thiệu</a></li>
+            </ul>
+        </nav>
+        <div class="custom-auth-dropdown">
+            <% if (user) { %>
+                <div class="custom-dropdown">
+                    <button class="custom-dropbtn">Xin chào, <%= user.username %> <i
+                                class="fa fa-caret-down"></i></button>
+                    <div class="custom-dropdown-menu">
+                        <a href="/my-bookings" class="custom-dropdown-link">Phòng đã đặt</a>
+                        <a href="/logout" class="custom-dropdown-link">Đăng xuất</a>
+                    </div>
+                </div>
+                <% } else { %>
+                    <a href="/login" class="custom-login-btn">Đăng nhập</a>
+                    <a href="/register" class="custom-register-btn">Đăng ký</a>
+                    <% } %>
+        </div>
+    </div>
+</header>

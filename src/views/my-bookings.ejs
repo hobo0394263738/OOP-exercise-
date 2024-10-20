@@ -1,0 +1,45 @@
+<div class="my-bookings-page">
+    <h1>Danh Sách Phòng Đã Đặt</h1>
+
+    <% if (bookings && bookings.length> 0) { %>
+        <table class="bookings-table">
+            <thead>
+                <tr>
+                    <th>Số Phòng</th>
+                    <th>Loại Phòng</th>
+                    <th>Ngày Check-in</th>
+                    <th>Ngày Check-out</th>
+                    <th>Trạng Thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% bookings.forEach(booking=> { %>
+                    <tr>
+                        <td>
+                            <%= booking.Room.room_number %>
+                        </td>
+                        <td>
+                            <%= booking.Room.RoomType.name %>
+                        </td>
+                        <td>
+                            <%= booking.check_in_date.toLocaleDateString('vi-VN') %>
+                        </td>
+                        <td>
+                            <%= booking.check_out_date.toLocaleDateString('vi-VN') %>
+                        </td>
+                        <td>
+                            <% let statusTranslation; switch(booking.status) { case 'booked' :
+                                statusTranslation='Đã đặt' ; break; case 'checked_in' :
+                                statusTranslation='Đã nhận phòng' ; break; case 'checked_out' :
+                                statusTranslation='Đã trả phòng' ; break; default: statusTranslation='Không xác định' ;
+                                } %>
+                                <%= statusTranslation %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <p>Bạn chưa đặt phòng nào.</p>
+            <% } %>
+</div>

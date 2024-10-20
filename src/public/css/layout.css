@@ -1,0 +1,151 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #223871;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1b2b5b;
+    border-radius: 8px;
+}
+
+/* Custom Dropdown Styles */
+.custom-auth-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.custom-dropdown {
+    position: relative;
+}
+
+.custom-dropbtn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.custom-dropbtn i {
+    margin-left: 5px;
+}
+
+/* Custom Dropdown Menu */
+.custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    right: 0;
+    padding: 5px 0;
+}
+
+.custom-dropdown:hover .custom-dropdown-menu {
+    display: block;
+}
+
+/* Dropdown Links */
+.custom-dropdown-link {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-dropdown-link:hover {
+    background-color: #f1f1f1;
+}
+
+/* Custom Auth buttons */
+.custom-login-btn,
+.custom-register-btn {
+    color: white;
+    background-color: #1b2b5b;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-login-btn:hover,
+.custom-register-btn:hover {
+    background-color: #445d9a;
+    transform: scale(1.05);
+}
+
+/* Main Content Styles */
+main {
+    margin: 30px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1b2b5b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,45 @@
+<div class="add-room-page">
+    <h1>Thêm Phòng</h1>
+
+    <% if (success) { %>
+        <div class="success-message">
+            <%= success %>
+        </div>
+        <% } %>
+
+            <% if (error) { %>
+                <div class="error-message">
+                    <%= error %>
+                </div>
+                <% } %>
+
+                    <form action="/admin/room/add" method="POST">
+                        <div class="form-group">
+                            <label for="room_number">Số Phòng</label>
+                            <input type="text" id="room_number" name="room_number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="room_type_id">Loại Phòng</label>
+                            <select id="room_type_id" name="room_type_id" required>
+                                <% roomTypes.forEach(roomType=> { %>
+                                    <option value="<%= roomType.id %>">
+                                        <%= roomType.name %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Trạng Thái</label>
+                            <select id="status" name="status" required>
+                                <option value="available">Available</option>
+                                <option value="booked">Booked</option>
+                                <option value="occupied">Occupied</option>
+                                <option value="maintenance">Maintenance</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Thêm Phòng</button>
+                    </form>
+</div>

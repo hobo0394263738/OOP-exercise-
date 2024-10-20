@@ -1,0 +1,33 @@
+<div class="add-room-type-page">
+    <h1>Thêm Loại Phòng Mới</h1>
+
+    <% if (error) { %>
+        <div class="error-message">
+            <%= error %>
+        </div>
+        <% } %>
+            <% if (success) { %>
+                <div class="success-message">
+                    <%= success %>
+                </div>
+                <% } %>
+
+                    <form action="/admin/room-types/add" method="POST">
+                        <div class="form-group">
+                            <label for="name">Tên Loại Phòng</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Giá (VND)</label>
+                            <input type="number" id="price" name="price" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Mô tả</label>
+                            <textarea id="description" name="description"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Thêm Loại Phòng</button>
+                    </form>
+</div>

@@ -1,0 +1,32 @@
+<div class="room-details-page">
+    <h1>Chi Tiết Phòng <%= room.room_number %>
+    </h1>
+
+    <div class="room-info">
+        <p><strong>Loại Phòng:</strong>
+            <%= room.RoomType ? room.RoomType.name : 'Không xác định' %>
+        </p>
+        <p><strong>Giá Phòng:</strong>
+            <%= room.RoomType ? room.RoomType.price.toLocaleString('vi-VN') + ' VND' : 'Không xác định' %>
+        </p>
+
+        <p><strong>Trạng Thái:</strong>
+            <% let statusTranslation; switch(room.status) { case 'available' : statusTranslation='Có sẵn' ; break;
+                case 'booked' : statusTranslation='Đã đặt' ; break; case 'occupied' : statusTranslation='Đang sử dụng' ;
+                break; case 'maintenance' : statusTranslation='Bảo trì' ; break; default:
+                statusTranslation='Không xác định' ; } %>
+                <span class="room-status <%= room.status %>">
+                    <%= statusTranslation %>
+                </span>
+        </p>
+
+        <p><strong>Mô tả:</strong>
+            <%= room.RoomType ? room.RoomType.description : 'xem thêm ...' %>.
+        </p>
+    </div>
+
+    <a href="/" class="back-btn">Quay lại Trang Chủ</a>
+    <% if (room.status==='available' ) { %>
+        <a href="/room/book/<%= room.id %>" class="book-btn">Đặt Phòng</a>
+        <% } %>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/admin-layout.css">
+    <link rel="stylesheet" href="/css/room-types.css">
+    <link rel="stylesheet" href="/css/add-room-type.css">
+    <link rel="stylesheet" href="/css/room-management.css">
+    <link rel="stylesheet" href="/css/add-room.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Include Sidebar -->
+        <%- include('../partials/admin-sidebar') %>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="container">
+                    <%- include(body) %> <!-- Include nội dung chính của từng trang quản lý -->
+                </div>
+            </main>
+    </div>
+</body>
+
+</html>

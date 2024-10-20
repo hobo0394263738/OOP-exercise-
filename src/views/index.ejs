@@ -1,0 +1,29 @@
+<div class="home-page">
+    <h1>WELLCOME</h1>
+
+    <div class="rooms-list">
+        <% if (rooms && rooms.length> 0) { %>
+            <% rooms.forEach(room=> { %>
+                <div class="room-card">
+                    <h2>Phòng <%= room.room_number %>
+                    </h2>
+                    <p>
+                        Loại Phòng: <%= room.RoomType ? room.RoomType.name : 'Không xác định' %>
+                    </p>
+                    <p>
+                        <% let statusTranslation; switch(room.status) { case 'available' : statusTranslation='Có sẵn' ;
+                            break; case 'booked' : statusTranslation='Đã đặt' ; break; case 'occupied' :
+                            statusTranslation='Đang sử dụng' ; break; case 'maintenance' : statusTranslation='Bảo trì' ;
+                            break; default: statusTranslation='Không xác định' ; } %>
+                            <span class="room-status <%= room.status %>">
+                                <%= statusTranslation %>
+                            </span>
+                    </p>
+                    <a href="/room/<%= room.id %>" class="view-details-btn">Xem Chi Tiết</a>
+                </div>
+                <% }) %>
+                    <% } else { %>
+                        <p>Hiện tại không có phòng nào</p>
+                        <% } %>
+    </div>
+</div>
