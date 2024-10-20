@@ -1,0 +1,30 @@
+# Thư mục node_modules không cần đẩy lên repository
+node_modules/
+
+# Tệp lockfiles
+package-lock.json
+yarn.lock
+
+# Tệp cấu hình môi trường
+.env
+
+# Tệp log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tệp build (nếu có)
+dist/
+build/
+
+# Tệp IDE và hệ điều hành
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Tệp tạm thời và cache
+tmp/
+temp/
+*.tmp
+*.log
