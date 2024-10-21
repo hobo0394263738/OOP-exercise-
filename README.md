@@ -1,4 +1,4 @@
-GROUP_10-OOP-N03 
+GROUP_03-OOP-N01
 # Hệ thống xây dựng phần mềm quản lý khách sạn
 
 ## Giới Thiệu Dự Án
