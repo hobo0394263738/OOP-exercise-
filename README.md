@@ -10,14 +10,14 @@ GROUP_10-OOP-N03
 ## Chức Năng Chính
 - Đăng ký, đăng nhập tài khoản người dùng
 - Đặt phòng
-- Liệt kê các phòng, đề xuất tìm kiếm
-- Thêm, sửa, xóa thông tin phòng 
-- Thêm, sửa, xóa thông tin khách hàng
+- Hiển thị danh sách phòng đã đặt(khách hàng), danh sách phòng chung (admin)
+- Thêm, sửa, xóa thông tin phòng
 ## UML Dự Án
 
-## 1.1 Entity-Relationship Diagram (ERD)
-![Uploading Sơ đồ.png…]()
+Sequence Diagram
 
 
+
+![Giải thích quy trình dịch vụ khách hàng từng bước một (A4)](https://github.com/user-attachments/assets/7a1b90eb-fee7-495c-a982-82b62117a5ef)
 
    
