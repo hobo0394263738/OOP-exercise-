@@ -21,9 +21,13 @@ GROUP_10-OOP-N03
 ![Giải thích quy trình dịch vụ khách hàng từng bước một (A4)](https://github.com/user-attachments/assets/7a1b90eb-fee7-495c-a982-82b62117a5ef)
 
 2. UML Activity Diagram
-   2.1 Chức năng đăng ký/ đăng nhập![đăng nhập_ đăng ký](https://github.com/user-attachments/assets/08c7a061-7fb3-4756-b5e9-5cd1ab3ac986)
+   ##2.1 Chức năng đăng ký/ đăng nhập
+   ![đăng nhập_ đăng ký](https://github.com/user-attachments/assets/08c7a061-7fb3-4756-b5e9-5cd1ab3ac986)
+   ##2.2 Guest 
+   ![Guest](https://github.com/user-attachments/assets/7361bd1a-f2bc-4121-8ed8-29651d1ec7af)
+   ##2.3 Admin
+![Admin](https://github.com/user-attachments/assets/a0571cf2-d9f9-46b4-864b-582941548a42)
 
-   
 
 
    
