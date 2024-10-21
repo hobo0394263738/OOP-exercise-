@@ -14,10 +14,16 @@ GROUP_10-OOP-N03
 - Thêm, sửa, xóa thông tin phòng
 ## UML Dự Án
 
-Sequence Diagram
+1. UML Sequence Diagram
 
 
 
 ![Giải thích quy trình dịch vụ khách hàng từng bước một (A4)](https://github.com/user-attachments/assets/7a1b90eb-fee7-495c-a982-82b62117a5ef)
+
+2. UML Activity Diagram
+   2.1 Chức năng đăng ký/ đăng nhập![đăng nhập_ đăng ký](https://github.com/user-attachments/assets/08c7a061-7fb3-4756-b5e9-5cd1ab3ac986)
+
+   
+
 
    
